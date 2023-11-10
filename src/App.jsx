@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Display from './display'
+import Display from './Components/display'
 
 function App() {
   const [fName, setfName] = useState("Example")
@@ -43,7 +43,7 @@ function App() {
           <input value={skills} type="text" id="skills" onChange={(e) => setSkills(e.target.value)}></input>
         </section>
         <section className="formDisp">
-          <Display />
+          <Display fName={fName} lName={lName} age={age} uName={uName} dName={dName} perc={perc} skills={skills}/>
         </section>
       </main>
     </>

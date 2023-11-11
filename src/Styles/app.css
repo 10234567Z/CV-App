@@ -48,6 +48,6 @@ input{
 
 @media (prefers-color-scheme: dark){
     .formInp > h2{
-        text-shadow: -1px 0px 3px #000000;
+        text-shadow: 0px 0px 4px #000000;
     }
 }

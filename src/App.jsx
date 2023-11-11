@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Display from './Components/display'
+import './Styles/app.css'
 
 function App() {
   const [fName, setfName] = useState("Example")

@@ -1,0 +1,21 @@
+#root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 100%;
+    }
+}

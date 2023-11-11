@@ -20,11 +20,6 @@
   box-sizing: border-box;
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -41,6 +36,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -67,9 +63,11 @@ button:focus-visible {
 }
 
 header{
-  position: relative;
-  top: 0;
   text-align: center;
+}
+
+label{
+  display: block;
 }
 
 @media (prefers-color-scheme: light) {

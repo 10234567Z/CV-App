@@ -45,3 +45,9 @@ input{
         grid-template-columns: 100%;
     }
 }
+
+@media (prefers-color-scheme: dark){
+    .formInp > h2{
+        text-shadow: -1px 0px 3px #000000;
+    }
+}

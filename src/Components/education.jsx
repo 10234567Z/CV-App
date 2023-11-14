@@ -1,7 +1,7 @@
 export default function Education({
     uName,
     dName,
-    perc
+    gradYear
 }) {
     return (
         <>
@@ -9,8 +9,8 @@ export default function Education({
             <p>{uName}</p>
             <h5>Degree Name:</h5>
             <p>{dName}</p>
-            <h5>Percentage:</h5>
-            <p>{perc}%</p>
+            <h5>Year Graduated:</h5>
+            <p>{gradYear}</p>
         </>
     )
 }

@@ -34,20 +34,42 @@ input{
     width: 250px;
 }
 
-.formInp > h2{
+.formInp > h2 , .formDisp > h2{
     padding: 5px;
     background-color: aquamarine;
     margin: 8px;
+    width: 100%;
 }
 
-@media (max-width: 600px) {
+.formDisp{
+    border: 1px solid black;
+    margin: 15px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: auto fit-content(100px) auto fit-content(100px) auto;
+    width: 700px;
+    max-height: 1280px;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin: 10px;
+}
+
+.expAdd{
+    max-width: 200px;
+}
+
+@media (max-width: 1600px) {
     main {
         grid-template-columns: 100%;
     }
 }
 
 @media (prefers-color-scheme: dark){
-    .formInp > h2{
+    .formInp > h2 , .formDisp > h2{
         text-shadow: 0px 0px 4px #000000;
     }
 }

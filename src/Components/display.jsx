@@ -1,21 +1,25 @@
 import Education from "./education";
 import Intro from "./intro";
-import Skills from "./skills";
 
 export default function Display({
     fName,
     lName,
     age,
+    email,
     uName,
     dName,
-    perc,
-    skills
+    gradYear,
 }){
     return (
         <>
-            <Intro fName={fName} lName={lName} age={age}/>
-            <Education uName={uName} dName={dName} perc={perc} />
-            <Skills skills={skills}/>
+            <section className="introD">
+                <Intro fName={fName} lName={lName} age={age} email={email}/>
+            </section>
+            <h2>Education</h2>
+            <section className="educD">
+                <Education uName={uName} dName={dName} gradYear={gradYear} />
+            </section>
+            <h2>Experience</h2>
         </>
     )
 }

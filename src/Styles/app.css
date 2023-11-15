@@ -46,20 +46,27 @@ input{
     margin: 15px;
     display: grid;
     place-items: center;
-    grid-template-rows: auto fit-content(100px) auto fit-content(100px) auto;
+    grid-template-rows: 100px fit-content(30px) auto fit-content(30px) auto;
     width: 700px;
     max-height: 1280px;
 }
 
 .experience {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
     gap: 10px;
     margin: 10px;
 }
 
 .expAdd{
     max-width: 200px;
+}
+
+.companyDetails{
+    padding: 10px;
+    background-color:burlywood;
+    border-radius: 8px;
 }
 
 @media (max-width: 1600px) {

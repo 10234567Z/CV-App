@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Display from './Components/display'
 import './Styles/app.css'
-import Experience from './Components/experience'
 
 function App() {
   const [fName, setfName] = useState("Example")
@@ -11,20 +10,67 @@ function App() {
   const [uName, setUName] = useState("Example University")
   const [dName, setDName] = useState("Example Degree")
   const [gradYear, setGradYear] = useState(69)
-  const [count , setCount] = useState(0);
-  const [experiences , setExperiences] = useState([])
+  const [count, setCount] = useState(0);
   const [cName, setCName] = useState([])
-  const [role, setRole] = useState([])
-  const [duration, setDuration] = useState([])
+  const [rName, setRName] = useState([])
+  const [dF, setDf] = useState([])
+  const [dT, setDt] = useState([])
+
+  const changeCName = (e) => {
+    let index = e.target.id.slice(-1)
+    let dupC = [...cName]
+    dupC[index] = e.target.value
+    setCName(dupC)
+  }
+  const changeRName = (e) => {
+    let index = e.target.id.slice(-1)
+    let dupR = [...rName]
+    dupR[index] = e.target.value
+    setRName(dupR)
+  }
+  const changeDF = (e) => {
+    let index = e.target.id.slice(-1)
+    let dupDF = [...dF]
+    dupDF[index] = e.target.value
+    setDf(dupDF)
+  }
+  const changeDT = (e) => {
+    let index = e.target.id.slice(-1)
+    let dupDT = [...dT]
+    dupDT[index] = e.target.value
+    setDf(dupDT)
+  }
 
   const handleC = () => {
-    if(count >= 5){
+    if (count >= 5) {
       alert("Too many jobs to be posted buddy")
     }
-    else{
+    else {
       setCount(count + 1)
-      setExperiences([...experiences,<Experience key={count} index={count}></Experience>])
+      setCName([...cName, "Example Name"])
+      setRName([...rName, "Example Role"])
+      setDf([...dF, "2000-01-01"])
+      setDt([...dT, "2002-01-01"])
     }
+  }
+
+  let nodeList = []
+  for (let i = 0; i < count; i++) {
+    let cID = `company${i}`
+    let rID = `role${i}`
+    let dfID = `durationF${i}`
+    let dtID = `durationT${i}`
+    nodeList.push(
+      <div className='companyDetails' key={i}>
+        <label htmlFor={cID}> Company Name :</label>
+        <input type='text' id={cID} value={cName[i]} onChange={changeCName}></input>
+        <label htmlFor={rID}> Role Name :</label>
+        <input type='text' id={rID} value={rName[i]} onChange={changeRName}></input>
+        <label htmlFor={dfID}> Duration From :</label>
+        <input type='date' id={dfID} value={dF[i]} onChange={changeDF}></input>
+        <label htmlFor={dtID}> Duration From :</label>
+        <input type='date' id={dtID} value={dT[i]} onChange={changeDT}></input>
+      </div>)
   }
   return (
     <>
@@ -56,11 +102,10 @@ function App() {
             <input value={gradYear} type="number" id="gradYear" onChange={(e) => setGradYear(e.target.value)} required></input>
           </section>
 
-
           <h2>Experience</h2>
           <button className='expAdd' onClick={handleC}>Add Experience</button>
           <section className="experience">
-            {experiences}
+            {nodeList.map((node) => node)}
           </section>
         </section>
         <section className="formDisp">

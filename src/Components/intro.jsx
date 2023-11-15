@@ -6,9 +6,9 @@ export default function Intro({
 }){
     return (
         <>
-           <h4>{fName} {lName}</h4>
+           <h1>{fName} {lName}</h1>
+           <h3>{email}</h3>
            <h5>Age: {age}</h5>
-           <h6>{email}</h6>
         </>
     )
 }

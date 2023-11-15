@@ -1,7 +1,7 @@
 import Education from "./education";
 import Experiences from "./experiences";
 import Intro from "./intro";
-import "/home/fudo/repos/CV-App/src/Styles/display.css"
+import "../Styles/display.css"
 
 export default function Display({
     fName,

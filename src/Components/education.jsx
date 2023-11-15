@@ -1,4 +1,4 @@
-import "/home/fudo/repos/CV-App/src/Styles/education.css"
+import "../Styles/education.css"
 
 export default function Education({
     uName,

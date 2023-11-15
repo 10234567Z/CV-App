@@ -1,4 +1,4 @@
-import '/home/fudo/repos/CV-App/src/Styles/experiences.css'
+import '../Styles/experiences.css'
 export default function Experiences({
     cName,
     rName,

@@ -1,4 +1,5 @@
 import Education from "./education";
+import Experiences from "./experiences";
 import Intro from "./intro";
 
 export default function Display({
@@ -9,6 +10,10 @@ export default function Display({
     uName,
     dName,
     gradYear,
+    cName,
+    rName,
+    dF,
+    dT
 }){
     return (
         <>
@@ -20,6 +25,9 @@ export default function Display({
                 <Education uName={uName} dName={dName} gradYear={gradYear} />
             </section>
             <h2>Experience</h2>
+            <section className="expD">
+                <Experiences cName={cName} rName={rName} dF={dF} dT={dT}/>
+            </section>
         </>
     )
 }

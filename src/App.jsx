@@ -109,7 +109,7 @@ function App() {
           </section>
         </section>
         <section className="formDisp">
-          <Display fName={fName} lName={lName} age={age} email={email} uName={uName} dName={dName} gradYear={gradYear} />
+          <Display fName={fName} lName={lName} age={age} email={email} uName={uName} dName={dName} gradYear={gradYear} cName={cName} rName={rName} dF={dF} dT={dT} />
         </section>
       </main>
     </>

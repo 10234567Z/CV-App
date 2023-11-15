@@ -73,6 +73,9 @@ input{
     main {
         grid-template-columns: 100%;
     }
+    .formDisp{
+        justify-self: center;
+    }
 }
 
 @media (prefers-color-scheme: dark){

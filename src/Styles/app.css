@@ -46,7 +46,7 @@ input{
     margin: 15px;
     display: grid;
     place-items: center;
-    grid-template-rows: fit-content(100px) fit-content(30px) auto fit-content(30px) auto;
+    grid-template-rows: fit-content(100px) fit-content(30px) fit-content(300px) fit-content(30px) auto;
     width: 700px;
     max-height: 1280px;
 }

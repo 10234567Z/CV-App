@@ -95,9 +95,9 @@ function App() {
           <h2>Education</h2>
           <section className="educ">
             <label htmlFor="collegN">University name:</label>
-            <input value={uName} type="text" maxLength={12} id="collegN" onChange={(e) => setUName(e.target.value)} required></input>
+            <input value={uName} type="text" id="collegN" onChange={(e) => setUName(e.target.value)} required></input>
             <label htmlFor="degreeN">Degree name:</label>
-            <input value={dName} type="text" maxLength={12} id="degreeN" onChange={(e) => setDName(e.target.value)} required></input>
+            <input value={dName} type="text" id="degreeN" onChange={(e) => setDName(e.target.value)} required></input>
             <label htmlFor="gradYear">Graduation %:</label>
             <input value={gradYear} type="number" id="gradYear" onChange={(e) => setGradYear(e.target.value)} required></input>
           </section>
